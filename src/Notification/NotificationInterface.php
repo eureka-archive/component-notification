@@ -13,7 +13,6 @@ namespace Eureka\Component\Notification;
  * Class for basic notifications on actions (save, delete...)
  *
  * @author  Romain Cottard
- * @version 1.0.0
  */
 interface NotificationInterface
 {

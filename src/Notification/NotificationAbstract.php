@@ -13,17 +13,16 @@ namespace Eureka\Component\Notification;
  * Class for basic notifications on actions (save, delete...)
  *
  * @author  Romain Cottard
- * @version 1.0.0
  */
 abstract class NotificationAbstract implements NotificationInterface
 {
     /**
-     * @var string $message
+     * @var string $message Message
      */
     protected $message = '';
 
     /**
-     * @var int $type
+     * @var int $type Notification type
      */
     protected $type = '';
 
@@ -63,7 +62,7 @@ abstract class NotificationAbstract implements NotificationInterface
      * Set message
      *
      * @param  string $message
-     * @return $this
+     * @return self
      */
     public function setMessage($message)
     {
@@ -76,7 +75,7 @@ abstract class NotificationAbstract implements NotificationInterface
      * Set type
      *
      * @param  int $type
-     * @return $this
+     * @return self
      */
     public function setType($type)
     {

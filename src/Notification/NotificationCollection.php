@@ -12,18 +12,17 @@ namespace Eureka\Component\Notification;
 /**
  * Breadcrumb class
  *
- * @author  Romain Cottard
- * @version 1.0.0
+ * @author  Romain Cottar
  */
 class NotificationCollection implements \Iterator, \Countable
 {
     /**
-     * @var int $index
+     * @var int $index Current index item.
      */
     private $index = 0;
 
     /**
-     * @var int $count
+     * @var int $count Number of notification
      */
     private $count = 0;
 
@@ -36,7 +35,7 @@ class NotificationCollection implements \Iterator, \Countable
      * Add item.
      *
      * @param NotificationInterface $item
-     * @return $this
+     * @return self
      */
     public function add(NotificationInterface $item)
     {
@@ -99,6 +98,7 @@ class NotificationCollection implements \Iterator, \Countable
 
     /**
      * Count countable method.
+     *
      * @return int
      */
     public function count()

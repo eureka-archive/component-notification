@@ -13,7 +13,6 @@ namespace Eureka\Component\Notification;
  * Class for basic notifications on actions (save, delete...)
  *
  * @author  Romain Cottard
- * @version 1.0.0
  */
 class NotificationBootstrap extends NotificationAbstract
 {
@@ -24,27 +23,22 @@ class NotificationBootstrap extends NotificationAbstract
      */
     public function getCss()
     {
-        $css = 'info';
-
-        switch ($this->type)
-        {
+        switch ($this->type) {
             case self::TYPE_ERROR:
                 $css = 'danger';
                 break;
-
             case self::TYPE_WARNING:
                 $css = 'warning';
                 break;
-
             case self::TYPE_INFO:
                 $css = 'info';
                 break;
-
             case self::TYPE_SUCCESS:
                 $css = 'success';
                 break;
-
             default:
+                $css = 'info';
+                break;
         }
 
         return $css;
@@ -57,26 +51,22 @@ class NotificationBootstrap extends NotificationAbstract
      */
     public function getHeader()
     {
-        $header = 'Info';
-
-        switch ($this->type)
-        {
+        switch ($this->type) {
             case self::TYPE_ERROR:
                 $header = 'Error!';
                 break;
-
             case self::TYPE_WARNING:
                 $header = 'Warning!';
                 break;
-
             case self::TYPE_INFO:
                 $header = 'Info';
                 break;
-
             case self::TYPE_SUCCESS:
                 $header = 'Success';
                 break;
             default:
+                $header = 'Info';
+                break;
         }
 
         return $header;
@@ -89,28 +79,22 @@ class NotificationBootstrap extends NotificationAbstract
      */
     public function getIcon()
     {
-        $icon = 'info';
-
-        switch ($this->type)
-        {
+        switch ($this->type) {
             case self::TYPE_ERROR:
                 $icon = 'ban';
                 break;
-
             case self::TYPE_WARNING:
                 $icon = 'warning';
                 break;
-
             case self::TYPE_INFO:
                 $icon = 'info';
                 break;
-
             case self::TYPE_SUCCESS:
                 $icon = 'check';
                 break;
-
-
             default:
+                $icon = 'info';
+                break;
         }
 
         return $icon;
